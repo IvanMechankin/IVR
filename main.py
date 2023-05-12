@@ -33,10 +33,3 @@ if __name__ == '__main__':
     phone.stop()
 
 
-def recognize_speech(audio_stream):
-    # TODO: Реализовать распознавание речи
-    return "Hello, world!"
-
-
-if __name__ == "__main__":
-    main()
