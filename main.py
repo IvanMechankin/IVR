@@ -4,7 +4,7 @@ import wave
 
 def answer(call):
     try:
-        f = wave.open('prompt.wav', 'rb')
+        f = wave.open('noandrey.wav', 'rb')
         frames = f.getnframes()
         data = f.readframes(frames)
         f.close()
@@ -27,7 +27,7 @@ def answer(call):
         call.hangup()
 
 if __name__ == '__main__':
-    phone = VoIPPhone("192.168.88.19", "5060", "1111", "6cce551bb0828b587304ce07837111bf", myIP="10.10.20.67", callCallback=answer)
+    phone = VoIPPhone(server="192.168.88.19", port=int("5060"), username="1111", password="6cce551bb0828b587304ce07837111bf", myIP="10.10.20.67", callCallback=answer)
     phone.start()
     input('Press enter to disable the phone')
     phone.stop()
